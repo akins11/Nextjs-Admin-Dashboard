@@ -1,0 +1,62 @@
+.layout.dark {
+    $color-main-dark: #C77DFF;
+    $color-purple6: #E0AAFF;
+    $box-shadow-dark: rgba(121, 117, 117, 0.25) 0px 2px 5px -1px, rgba(136, 132, 132, 0.3) 0px 1px 3px -1px;
+
+    .card {
+        box-shadow: $box-shadow-dark;
+    }
+    .topbar {
+        background-color: rgba(175, 171, 171, 0.17);
+        box-shadow: 0 3px 25px rgba(134, 126, 126, 0.247);
+
+        .wrapper {
+            .left {
+                .brand {
+                    color: white;
+        
+                    .bold {
+                        color: $color-main-dark;
+                    }
+                }
+            }
+
+            .right {
+                .icon_container {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        background: #222;
+        border-right: 1px solid rgba(121, 117, 117, 0.25);
+
+        .title {
+            color: white;
+        }
+
+        .nav_item {
+
+            .text,
+            .icon {
+                color: white;
+            }
+
+            &:hover {
+                background: #3d3c3c9c;
+            }
+
+            &.active {
+                background-color: $color-main-dark;
+                box-shadow: $box-shadow-dark;
+            }
+        }
+    }
+
+    .main {
+        background: #222;
+        color: white;
+    }
+}

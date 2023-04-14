@@ -1,0 +1,96 @@
+:root {
+    --color-main: #9400D3;
+    --color-title: #666666;
+    --color-text: #555555;
+    --color-muted: #a8a6a6;
+    --color-danger: #F25C54;
+    --color-success: #41F1B6;
+
+    /* palette */
+    --color-orange1: #F06542;
+    --color-orange2: #FB9649;
+    --color-orange3: #FFB57D;
+    --color-orange4: #F8D9C6;
+    
+    --color-purple1: #25003d;
+    --color-purple2: #9400d3ef;
+    --color-purple3: #8F03FF;
+    --color-purple4: #9D53FF;
+    --color-purple5: #B29EF8;
+
+    --color-green2: #7FD8BE;
+    --color-green3: #A1FCDF;
+
+    --color-brown1: #9C5544;
+    --color-brown2: #CB997E;
+    --color-brown3: #DDBEA9;
+
+    --box-border-radius: 2px;
+    --border-radius: 0.5rem;
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    --card-padding: 1.8rem;
+
+    --border1: 1px solid var(var(--color-purple1));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+body {
+    font-family: "Roboto";
+}
+
+
+/* ------------------------- Page style ----------------------- */
+.page {
+    width: 98%;
+    margin: 0 1rem 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+  
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    column-gap: 0.5rem;
+    padding: 0.1rem 0.5rem;
+}
+
+
+/* --------------------------------- Card ------------------------------ */
+.card {
+    border-radius: var(--border-radius);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+
+
+/* ------------- scroll bar --------------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #A0A0A0;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f2f2f2;;
+  }
