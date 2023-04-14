@@ -1,0 +1,425 @@
+$color-main: #9400D3;
+$color-title: #666666;
+$color-text: #555555;
+$color-muted: #a8a6a6;
+
+$color-orange3: #FFB57D;
+$color-purple1: #25003d;
+
+$border-radius: 0.5rem;
+
+$color-title-dark: rgb(238, 234, 234);
+$color-text-dark: white;
+$color-muted-dark: rgb(99, 97, 97);
+$color-main-dark: #C77DFF;
+$color-purple6: #E0AAFF;
+
+
+
+.attrition__sub {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $color-text;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+.attrition_title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $color-title;
+    margin-bottom: 1rem;
+}
+
+
+.attrition_legend {
+    width: 27%;
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    column-gap: 2.5rem;
+    padding: 2rem;
+    background-color: #f7f7f7c4;
+    border-radius: $border-radius;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        column-gap: 1rem;
+
+        .indicator {
+            width: 1.3rem;
+            height: 1.3rem;
+            background-color: blue;
+            border-radius: 0.5rem;
+
+            &.attrition {
+                background-color: $color-orange3;
+            }
+            &.retention {
+                background-color: $color-main;
+            }
+        }
+    }
+}
+
+
+.attrition_stats {
+    flex: 1;
+    height: 10rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    .container {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: .3s ease;
+        border: 1px solid transparent;
+        border-radius: 0.5rem;
+        padding: 0.6rem;
+
+        &:hover {
+            border-color: $color-purple1;
+            cursor: pointer;
+        }
+
+        .top {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 1.5rem;
+
+            .icon {
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                color: $color-text;
+                border: 1px solid $color-purple1;
+            }
+
+            .value {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $color-text;
+            }
+        }
+
+        .bottom {
+            align-self: center;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $color-title;
+        }
+    }
+}
+
+
+.attrition_gender {
+    flex: 1;
+    flex-basis: 110px;
+    height: 28rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.attrition_age {
+    flex: 2;
+    flex-basis: 130px;
+    height: 28rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.attrition_edu {
+    flex: 3;
+    flex-basis: 150px;
+    height: 28rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.attribute_dep {
+    width: 60%;
+    height: 23rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .container_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        margin-top: 1.5rem;
+
+        .container {
+            width: 30%;
+            height: 100%;
+        }
+    }
+}
+
+
+.attrition_role {
+    width: 40%;
+    height: 23rem;
+    padding: 1rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+        .container_row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 2rem;
+
+            .role {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 2rem;
+
+                .role_title {
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    color: $color-text;
+                }
+            }
+
+            .value {
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                column-gap: 1rem;
+
+                .indicator {
+                    width: 2.3rem;
+                    height: 2.3rem;
+                    padding: 0.4rem;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        width: 2.25rem;
+                        height: 2.25rem;
+                        cursor: default;
+                    }
+
+                    &.attrition {
+                        background-color: $color-orange3;
+                        color: white;
+
+                        &:hover {
+                            background-color: #ffb57dc0;
+                        }
+                    }
+                    &.retention {
+                        background-color: $color-main;
+                        color: white;
+
+                        &:hover {
+                            background-color: #9400d3c7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.attrition_trend {
+    flex: 2;
+    height: 28rem;
+    padding: 1rem;
+
+    .details {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 0.2rem;
+        font-size: 1rem;
+        color: #777676;
+
+        .percentag_change {
+            color: #383737;
+        }
+    }
+}
+
+
+.attrition_recent {
+    flex: 1;
+    flex-basis: 130px;
+    height: 28rem;
+    padding: 1rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-bottom: 0.1rem;
+        height: 9rem;
+
+        .empId {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 1rem;
+            margin-bottom: 0;
+
+            .id {
+                color: rgb(34, 33, 33);
+                font-weight: 500;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            column-gap: 2.5rem;
+
+            .date {
+                color: rgba(148, 120, 27, 0.74);
+            }
+
+            .details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 1.5rem;
+
+                .value {
+                    font-weight: 500;
+                    color: rgb(29, 28, 28);
+                }
+            }
+        }
+    }
+}
+
+
+
+// Dark Mode
+.page.dark {
+    .attrition__sub {
+        color: $color-text-dark;
+    }
+
+    .attrition_title {
+        color: $color-title-dark;
+    }
+
+    .attrition_legend {
+        background-color: #31313194;
+    }
+
+    .attrition_stats {
+        .container {
+            &:hover {
+                border-color: $color-purple6;
+            }
+
+            .top {
+                .icon {
+                    border: 1px solid $color-purple6;
+                    color: $color-text-dark;
+                }
+
+                .value {
+                    color: $color-text-dark;
+                }
+            }
+
+            .bottom {
+                color: $color-title-dark;
+            }
+        }
+    }
+
+    .attrition_role {
+        .container {
+            .container_row {
+                .role {
+                    .role_title {
+                        color: $color-text-dark;
+                    }
+                }
+
+                .value {
+                    .indicator {
+                        &.retention {
+                            background-color: $color-main-dark;
+                            color: white;
+    
+                            &:hover {
+                                background-color: #c77dffce;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .attrition_trend {
+        .details {
+            color: #c2bfbf;
+
+            .percentag_change {
+                color: #726f6f;
+            }
+        }
+    }
+
+    .attrition_recent {
+        .container {
+            .empId {
+                .id {
+                    color: rgb(173, 169, 169);
+                }
+            }
+
+            .info {
+                .date {
+                    color: rgba(207, 174, 63, 0.74);
+                }
+
+                .details {
+                    .value {
+                        color: rgb(218, 213, 213);
+                    }
+                }
+            }
+        }
+    }
+}

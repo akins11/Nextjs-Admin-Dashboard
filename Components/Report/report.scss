@@ -1,0 +1,441 @@
+$color-main: #9400D3;
+$color-title: #666666;
+$color-text: #555555;
+$color-muted: #a8a6a6;
+$color-danger: #F25C54;
+$color-success: #41F1B6;
+$color-orange3: #FFB57D;
+
+$color-purple1: #25003d;
+
+$color-title-dark: rgb(238, 234, 234);
+$color-text-dark: white;
+$color-muted-dark: rgb(99, 97, 97);
+$color-main-dark: #C77DFF;
+$color-purple6: #E0AAFF;
+
+
+
+.report_overall {
+    flex: 1;
+    height: 34rem;
+    padding: 1rem;
+
+    .container {
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+
+            .top {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 0.3rem;
+
+                .title {
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    color: $color-title;
+                }
+            }
+
+            .bottom {
+                font-size: 1rem;
+                font-weight: 400;
+                color: $color-title;
+            }
+        }
+
+        .r {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 0.8rem;
+            column-gap: 2rem;
+
+            .star {
+                font-size: 1rem;
+                font-weight: 400;
+                color: $color-text;
+            }
+
+            .progress_bar {
+                width: 60%;
+                height: 1rem;
+                background-color: #ede8e836;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+
+                .bar {
+                    height: 100%;
+                    background-color: $color-purple1;
+                    transition: .3s ease;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+
+                    &:hover {
+                        background-color: $color-main;
+                    }
+                }
+            }
+
+            .value_title {
+                font-size: 0.9rem;
+                font-weight: 400;
+                color: $color-text;
+            }
+        }
+    }
+
+    .space {
+        margin-bottom: 2.3rem;
+    }
+}
+
+
+
+.customer_report {
+    flex: 2;
+    height: 34rem;
+    padding: 1rem;
+
+    .title {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 1rem;
+    }
+
+    .review_container {
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+
+            .img_name {
+                width: 30%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 1rem;
+
+                .img {
+                    border-radius: 50%;
+                }
+
+                .name {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    color: $color-title;
+                }
+            }
+
+            .rating_icon {
+                font-size: 1.1rem;
+                color: $color-purple1;
+            }
+        }
+
+        .comment {
+            margin-left: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $color-text;
+        }
+    }
+}
+
+
+.report_team {
+    flex: 1;
+    height: 25rem;
+    padding: 1rem;
+
+    .title {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .update_row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            .left {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 1.5rem;
+
+                .img {
+                    border-radius: 50%;
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+    
+                    .name {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        color: $color-text;
+                    }
+    
+                    .title {
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        color: $color-text;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.report_project {
+    flex: 2;
+    height: 25rem;
+    padding: 1rem;
+
+    .title {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 0.6rem;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+
+        thead {
+            th {
+                color: $color-title;
+                text-align: left;
+                font-weight: 500;
+            }
+        }
+
+        tbody {
+            td {
+                border-bottom: 1px solid #F5F5F5;
+                height: 3rem;
+                color: $color-text;
+                font-size: 0.9rem;
+
+                .img {
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: rgb(87, 87, 252);
+                    border-radius: 50%;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 0.3rem;
+
+                    &.red {
+                        background-color: $color-danger;
+                    }
+                    &.green {
+                        background-color: $color-success;
+                    }
+                    &.yellow {
+                        background-color: $color-orange3;
+                    }
+                }
+
+                .email {
+                    font-size: 0.7rem;
+                    font-weight: 400;
+                    color: $color-muted;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    transition: .3s ease;
+
+                    &:hover {
+                        color: $color-text;
+                    }
+                }
+
+                .description {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    color: #c2c1c1;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    transition: .3s ease;
+
+                    &:hover {
+                        color: $color-text;
+                    }
+                }
+
+                .status {
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    background-color: green;
+                    border-radius: 0.5rem;
+                    text-align: center;
+                    margin-left: 0.6rem;
+                    cursor: default;
+                    transition: .3s ease;
+
+                    &.green {
+                        background-color: $color-success;
+
+                        &:hover {
+                            background-color: #41f1b676;
+                        }
+                    }
+                    &.yellow {
+                        background-color: $color-orange3;
+
+                        &:hover {
+                            background-color: #ffb57d72;
+                        }
+                    }
+                    &.red {
+                        background-color: $color-danger;
+
+                        &:hover {
+                            background-color: #f25c5469;
+                        }
+                    }
+                }
+            }
+
+            tr:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+
+// Dark Mode
+.page.dark {
+    .report_overall {
+        .container {
+            .header {
+                .title {
+                    color: $color-title-dark;
+                }
+
+                .bottom {
+                    color: $color-title-dark;
+                }
+            }
+
+            .r {
+                .star {
+                    color: $color-text-dark;
+                }
+
+                .progress_bar {
+                    background-color: #524f4f36;
+
+                    .bar {
+                        background-color: $color-purple6;
+
+                        &:hover {
+                            background-color: $color-main-dark;
+                        }
+                    }
+                }
+
+                .value_title {
+                    color: $color-text-dark;
+                }
+            }
+        }
+    }
+
+    .customer_report {
+        .title {
+            color: $color-title-dark;
+        }
+
+        .top {
+            .name {
+                color: $color-title-dark;
+            }
+
+            .rating_icon {
+                color: $color-purple6;
+            }
+        }
+
+        .comment {
+            color: $color-text-dark;
+        }
+    }
+
+    .report_team {
+        .title {
+            color: $color-title-dark;
+        }
+
+        .container {
+            .update_row {
+                .left {
+                    .description {
+                        .name,
+                        .title {
+                            color: $color-text-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .report_project {
+        .title {
+            color: $color-title-dark;
+        }
+
+        table {
+            thead {
+                th {
+                    color: $color-title-dark;
+                }
+            }
+
+            tbody {
+                td {
+                    border-bottom: 1px solid #2b2929;
+                    color: $color-text-dark;
+                }
+
+                tr:last-child {
+                    td {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}

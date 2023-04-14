@@ -1,0 +1,283 @@
+$color-main: #9400D3;
+$color-title: #666666;
+$color-text: #555555;
+$color-muted: #a8a6a6;
+$color-purple1: #25003d;
+$color-purple2: #9400d3ef;
+
+
+$color-title-dark: rgb(238, 234, 234);
+$color-text-dark: white;
+$color-muted-dark: rgb(99, 97, 97);
+$color-main-dark: #C77DFF;
+$color-purple6: #E0AAFF;
+
+
+.customer_count {
+    flex: 1;
+    height: 15rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 1.2rem;
+    }
+
+    .bars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .bar {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .cd {
+                width: 8rem;
+                height: 8rem;
+
+                .CircularProgressbar-path {
+                    stroke: $color-main !important;
+
+                    &:hover {
+                        stroke: $color-purple2 !important;
+                    }
+                }
+                .CircularProgressbar-trail {
+                    stroke: rgba(236, 231, 231, 0.555) !important;
+                }
+                .CircularProgressbar-text {
+                    fill: $color-main !important;
+                }
+                .CircularProgressbar-background {
+                    fill: rgba(236, 231, 231, 0.555) !important;
+                }
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                font-weight: 400;
+                color: $color-muted;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.customer_webTraffic {
+    flex: 2;
+    height: 15rem;
+    padding: 1rem;
+}
+
+
+.customer_table {
+    flex: 1;
+    height: 55rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $color-title;
+    }
+
+    .header_space {
+        margin-bottom: 1rem;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+
+        thead {
+            th {
+                color: $color-title;
+                font-weight: 500;
+            }
+        }
+
+        tbody {
+            td {
+                border-bottom: 1px solid #F5F5F5;
+                height: 2.2rem;
+                color: #555555;
+                font-size: 0.9rem;
+
+                .first_name {
+                    font-weight: 500;
+                    color: $color-text;
+                }
+                .last_name {
+                    font-weight: 500;
+                    color: #817f7f;
+                    margin-left: 0.6rem;
+                }
+
+                .muted {
+                    font-size: 0.7rem;
+                    color: $color-muted;
+                }
+
+                .status {
+                    width: 4rem;
+                    height: 2rem;
+                    padding: 0.6rem;
+                    border-bottom: 1px solid white;
+                    border-radius: 3px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        border-color: black;
+                        font-size: 0.7rem;
+                        width: 3.7rem;
+                        height: 1.8rem;
+                        cursor: default;
+                    }
+
+                    &.green {
+                        color: rgb(44, 243, 200);
+
+                        &:hover {
+                            color: rgb(0, 236, 185);
+                            background-color: rgba(72, 238, 202, 0.041);
+                            border-color: rgb(0, 236, 185);
+                        }
+                    }
+                    &.yellow {
+                        color: rgb(248, 232, 8);
+
+                        &:hover {
+                            color: rgb(255, 238, 2);
+                            background-color: rgba(248, 232, 8, 0.062);
+                            border-color: rgb(255, 238, 0);
+                        }
+                    }
+                    &.red {
+                        color: rgb(240, 67, 67);
+
+                        &:hover {
+                            color: rgb(255, 0, 0);
+                            background-color: rgba(240, 67, 67, 0.082);
+                            border-color: rgb(255, 0, 0);
+                        }
+                    }
+                }
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+
+
+// Dark Mode
+.page.dark {
+    .customer_count {
+        .title {
+            color: $color-title-dark;
+        }
+
+        .bars {
+            .bar {
+                .cd {
+                    .CircularProgressbar-path {
+                        stroke: $color-main-dark !important;
+            
+                        &:hover {
+                            stroke: $color-purple6 !important;
+                        }
+                    }
+                    .CircularProgressbar-trail {
+                        stroke: rgba(51, 50, 50, 0.452) !important;
+                    }
+                    .CircularProgressbar-text {
+                        fill: $color-main-dark !important;
+                    }
+                    .CircularProgressbar-background {
+                        fill: rgba(51, 50, 50, 0.452) !important;
+                    }
+                }
+
+                .subtitle {
+                    color: $color-muted-dark;
+                }
+            }
+        }
+    }
+
+    .customer_table {
+        .title {
+            color: $color-title-dark;
+        }
+
+        table {
+            thead {
+                th {
+                    color: $color-title-dark;
+                }
+            }
+
+            tbody {
+                td {
+                    border-bottom: 1px solid #2b2929;
+                    color: $color-text-dark;
+
+                    .first_name {
+                        color: $color-text-dark;
+                    }
+
+                    .last_name {
+                        color: #c4bbbb;
+                    }
+
+                    .muted {
+                        color: $color-muted-dark;
+                    }
+
+                    .status {
+                        border-bottom: 1px solid rgb(80, 78, 78);
+
+                        &:hover {
+                            &.green {        
+                                &:hover {
+                                    border-color: rgb(0, 236, 185);
+                                }
+                            }
+                            &.yellow {        
+                                &:hover {
+                                    border-color: rgb(255, 238, 0);
+                                }
+                            }
+                            &.red {        
+                                &:hover {
+                                    border-color: rgb(255, 0, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                tr:last-child td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,208 @@
+$color-main: #9400D3;
+$color-title: #666666;
+$color-text: #555555;
+$color-muted: #a8a6a6;
+$color-danger: #F25C54;
+$color-success: #41F1B6;
+
+$color-orange3: #FFB57D;
+$color-brown2: #CB997E;
+
+$color-title-dark: rgb(238, 234, 234);
+$color-text-dark: white;
+$color-muted-dark: rgb(99, 97, 97);
+$color-main-dark: #C77DFF;
+$color-purple6: #E0AAFF;
+
+.manage_project {
+    flex: 1;
+    height: 30rem;
+    padding: 2rem;
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 1.5rem;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+
+        thead {
+            th {
+                color: $color-title;
+                text-align: left;
+                font-weight: 500;
+            }
+        }
+
+        tbody {
+            td {
+                border-bottom: 1px solid #F5F5F5;
+                height: 3rem;
+                color: #555555;
+                font-size: 0.9rem;
+
+                .img {
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: rgb(93, 93, 237);
+                    color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.red {
+                        background-color: $color-danger;
+                    }
+                    &.yellow {
+                        background-color: $color-orange3;
+                    }
+                    &.green {
+                        background-color: $color-success;
+                    }
+                }
+
+                .email {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    color: $color-muted;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    transition: .3s ease;
+
+                    &:hover {
+                        color: $color-text;
+                    }
+                }
+
+                .project {
+                    width: 60%;
+                    height: 1.8rem;
+                    padding: 1rem;
+                    background-color: #f3ebeb68;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+
+                .team_col {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .team {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        background-color: blue;
+                        border-radius: 50%;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &.red {
+                            background: rgb(129, 98, 98);
+                        }
+                        &.yellow {
+                            background: rgba(173, 157, 63, 0.973);
+                        }
+                        &.green {
+                            background: rgb(236, 118, 226);
+                        }
+                        &.blue {
+                            background: rgb(81, 81, 238);
+                        }
+                        &.grey {
+                            background-color: $color-title;
+                        }
+                        &.brown {
+                            background-color: $color-brown2;
+                        }
+                        &.purple {
+                            background-color: $color-main;
+                        }
+                    }
+
+                    .icon_container {
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        margin-left: 0.5rem;
+                        background-color: rgba(0, 255, 149, 0.582);
+                        border-radius: 50%;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .status {
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    background-color: green;
+                    border-radius: 0.5rem;
+                    text-align: center;
+                    margin-left: 0.6rem;
+                    cursor: default;
+                    transition: .3s ease;
+
+                    &.green {
+                        background-color: $color-success;
+
+                        &:hover {
+                            background-color: #41f1b676;
+                        }
+                    }
+                    &.yellow {
+                        background-color: $color-orange3;
+
+                        &:hover {
+                            background-color: #ffb57d72;
+                        }
+                    }
+                    &.red {
+                        background-color: $color-danger;
+
+                        &:hover {
+                            background-color: #f25c5469;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Dark Mode 
+.page.dark {
+    .manage_project {
+        .title {
+            color: $color-title-dark;
+        }
+
+        table {
+            thead {
+                th {
+                    color: $color-title-dark;
+                }
+            }
+
+            tbody {
+                td {
+                    border-bottom: 1px solid #2b2929;
+                    color: $color-text-dark;
+
+                    .project {
+                        background-color: #44424268;
+                    }
+                }
+            }
+        }
+    }
+}

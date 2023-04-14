@@ -1,0 +1,547 @@
+$color-main: #9400D3;
+$color-purple1: #25003d;
+$color-purple2: #9400d3ef;
+$color-text: #555555;
+$color-title: #666666;
+$color-muted: #a8a6a6;
+
+$color-title-dark: rgb(238, 234, 234);
+$color-text-dark: white;
+$color-muted-dark: rgb(99, 97, 97);
+$color-main-dark: #C77DFF;
+$color-purple6: #E0AAFF;
+
+.section_title {
+    font-size: 1.3rem;
+    color: #2b2a2a;
+    font-weight: 400;
+    margin-top: 1.2rem;
+}
+
+.platform_summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .box {
+        width: 32.5%;
+        height: 9.5rem;
+        padding: 1rem;
+        cursor: pointer;
+
+        &.positive:hover {
+            background: #d3f0e8
+        }
+        &.negative:hover {
+            background: #f8dede
+        }
+
+        .firstrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            .icon_box {
+                padding: 0.6rem 1rem;
+                border: 1px solid $color-purple1;
+                margin-left: 1rem;
+                text-align: center;
+            }
+
+            .title {
+                margin-right: 1.5rem;
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: $color-text;
+            }
+        }
+
+        .secondrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1.5rem;
+            margin-bottom: 1rem;
+
+            .value {
+                font-weight: 500;
+                font-size: 1.4rem;
+                border-bottom: 1px solid #E3E3E3;
+            }
+
+            .value_rate {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 0.3rem;
+                padding: 0 0.4rem;
+                border-radius: 3px;
+
+                &.positive {
+                    color: #025202c5;
+                    background: #d0e7d03f;
+                }
+
+                &.negative {
+                    color: #660e0ece;
+                    background: #e9c8c846;
+                }
+            }
+
+            .rate_icon {
+                padding-top: 0.2rem;
+            }
+        }
+
+        .thirdrow {
+            color: $color-muted;
+            margin-top: 0.2rem;
+        }
+    }
+}
+
+// .analytics__pc-box:hover .analytics__pc-value-rate.positive {
+//     color: #025202;
+//     background: #d0e7d0;
+// }
+// .analytics__pc-box:hover .analytics__pc-value-rate.negative {
+//     color: #660e0e;
+//     background: #e9c8c8;
+// }
+
+.platform_usage {
+    flex: 1;
+    height: 25rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .input {
+        align-self: flex-end;
+        margin-bottom: 0.2rem;
+    }
+}
+
+.expenses_breakdown {
+    flex: 1;
+    height: 10rem;
+    padding: 1rem;
+
+    &:hover {
+        background: #db606018;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .title {
+            color: $color-title;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+
+        .header_icon {
+            width: 2rem;
+            height: 2rem;
+            padding: 0.5rem;
+            border: 1px solid $color-purple1;
+            border-radius: 3px;
+            text-align: center;
+
+            &:hover {
+                background: $color-purple1;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .value {
+        color: var(--color-text);
+        font-size: 1.9rem;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+    }
+
+    .sub {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 0.7rem;
+        color: var(--color-muted);
+        font-size: 1rem;
+    }
+}
+
+.total_expenses {
+    flex: 1;
+    flex-basis: 150px;
+    height: 25rem;
+    padding: 1rem;
+}
+
+
+.expenses_category {
+    flex: 1;
+    height: 25rem;
+    padding: 1rem;
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        color: $color-title;
+    }
+
+    .columns {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 0.6rem;
+        margin-left: 1.2rem;
+
+        .column_one {
+            width: 35%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 0.6rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: $color-text;
+        }
+
+        .column_two {
+            width: 10%;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: $color-text;
+            margin-right: 0.8rem;
+        }
+
+        .column_three {
+            width: 45%;
+
+            .progress_bar {
+                width: 100%;
+                height: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .value {
+                    height: 1.4rem;
+                    background-color: $color-main;
+                    border-radius: 3px;
+                    transition: .3s ease;
+
+                    &:hover {
+                        background-color: $color-purple2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.inventory_summary {
+    flex: 1;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+
+    .box {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: $color-title;
+            font-size: 1rem;
+            width: 100%;
+
+            .title {
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: $color-title;
+            }
+        }
+
+        .value_box {
+            align-self: center;
+            padding: 0.4rem;
+            background-color: #d5cbfc2f;
+            border-radius: 3px;
+            text-align: center;
+            margin-bottom: 1rem;
+
+            .value {
+                font-size: 1.7rem;
+                font-weight: 500;
+                color: $color-text;
+            }
+        }
+
+        .sub {
+            font-size: 1em;
+            font-weight: 400;
+            color: $color-muted;
+        }
+    }
+}
+
+
+.inventory_score {
+    flex: 1;
+    height: 20rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        align-self: flex-start;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 1rem;
+    }
+
+    .progress {
+        width: 10rem;
+        height: 10rem;
+
+        .CircularProgressbar-path {
+            stroke: $color-main !important;
+
+            &:hover {
+                stroke: $color-purple2 !important;
+            }
+        }
+        .CircularProgressbar-trail {
+            stroke: rgba(236, 231, 231, 0.555) !important;
+        }
+        .CircularProgressbar-text {
+            fill: $color-main !important;
+        }
+        .CircularProgressbar-background {
+            fill: rgba(236, 231, 231, 0.555) !important;
+        }
+    }
+
+    .divider {
+        height: 2px;
+        width: 70%;
+        border-bottom: 1px solid #c2bdbdb4;
+        margin: 1rem 0.1rem;
+    }
+
+    .desc {
+        align-self: space-between;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 2rem;
+
+        .l_desc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: $color-text;
+                margin-bottom: 0.5rem;
+            }
+
+            span {
+                font-size: 0.8rem;
+                font-weight: 400;
+                color: $color-muted;
+            }
+        }
+    }
+}
+
+
+.inventory_cost {
+    flex: 2;
+    height: 20rem;
+    padding: 1rem;
+}
+
+
+
+// Dark Mode
+.page.dark {
+    .section_title {
+        color: #f8f3f3;
+    }
+
+    .platform_summary {
+        .box {
+            &.positive:hover {
+                background: #2c6655
+            }
+            &.negative:hover {
+                background: #5f2a2a
+            }
+            
+            .firstrow {
+                .icon_box {
+                    border-color: $color-purple6;
+                }
+
+                .title {
+                    color: $color-text-dark;
+                }
+            }
+
+            .secondrow {
+                .value {
+                    border-bottom: 1px solid #ece9e9;
+                }
+
+                .value_rate {
+                    &.positive {
+                        color: #c7eec7c5;
+                        background: #d0e7d03f;
+                    }
+    
+                    &.negative {
+                        color: #f7c3c3ce;
+                        background: #e9c8c846;
+                    }
+                }
+            }
+
+            .thirdrow {
+                color: $color-muted-dark;
+            }
+        }
+    }
+
+    .expenses_breakdown {
+        .header {
+            .title {
+                color: $color-title-dark;
+            }
+
+            .header_icon {
+                border: 1px solid $color-purple6;
+
+                &:hover {
+                    background: $color-purple6;
+                    color: #222;
+                }
+            }
+        }
+    }
+
+    .expenses_category {
+        .title {
+            color: $color-title-dark;
+        }
+
+        .columns {
+            .column_one {
+                color: $color-text-dark;
+            }
+            
+            .column_two {
+                color: $color-text-dark;
+            }
+
+            .column_three {
+                .value {
+                    background-color: $color-main-dark;
+
+                    &:hover {
+                        background-color: #c985fd;
+                    }
+                }
+            }
+        }
+    }
+
+    .inventory_summary {
+        .box {
+            .header {
+                color: $color-title-dark;
+
+                .title {
+                    color: $color-title-dark;
+                }
+            }
+
+            .value_box {
+                background-color: #5756582f;
+
+                .value {
+                    color: $color-text-dark;
+                }
+            }
+
+            .sub {
+                color: $color-muted-dark;
+            }
+        }
+    }
+
+    .inventory_score {
+        .title {
+            color: $color-title-dark;
+        }
+
+        .progress {
+            .CircularProgressbar-path {
+                stroke: $color-main-dark !important;
+    
+                &:hover {
+                    stroke: $color-purple6 !important;
+                }
+            }
+            .CircularProgressbar-trail {
+                stroke: rgba(51, 50, 50, 0.452) !important;
+            }
+            .CircularProgressbar-text {
+                fill: $color-main-dark !important;
+            }
+            .CircularProgressbar-background {
+                fill: rgba(51, 50, 50, 0.452) !important;
+            }
+        }
+
+        .divider {
+            border-bottom: 1px solid #423e3eb4;
+        }
+
+        .desc {
+            .l_desc {
+                h4 {
+                    color: $color-text-dark;
+                }
+
+                span {
+                    color: $color-muted-dark;
+                }
+            }
+        }
+    }
+}

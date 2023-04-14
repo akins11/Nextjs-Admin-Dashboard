@@ -1,0 +1,385 @@
+$main-color: #9400D3;
+$color-title: #666666;
+$color-text: #555555;
+$color-muted: #a8a6a6;
+$color-danger: #F25C54;
+$color-success: #41F1B6;
+$color-purple1: #25003d;
+
+$color-title-dark: rgb(238, 234, 234);
+$color-text-dark: white;
+$color-muted-dark: rgb(99, 97, 97);
+$color-main-dark: #C77DFF;
+
+.performance_container {
+    width: 45%;
+
+    .row {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 0.6rem;
+
+        &.h_first {
+            margin-bottom: 0.6rem;
+        }
+
+        .box {
+            width: 50%;
+            height: 9.7rem;
+            padding: 0.4rem;
+
+            &:hover {
+                background: #fafafa;
+                cursor: pointer;
+            }
+
+            .title {
+                font-size: 1.2rem;
+                color: $color-title;
+                font-weight: 400;
+                padding-left: 1rem;
+            }
+
+            .divider {
+                margin-top: 0.1rem;
+                margin-bottom: 0.1rem;
+                height: 2px;
+                background: linear-gradient(to right,  rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+            }
+
+            .value_section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-top: 0.4rem;
+
+                .value {
+                    font-size: 1.3rem;
+                    margin-bottom: 0.6rem;
+                    color: #474646;
+                    background: #fafafa;
+                    border-radius: 5px;
+                    padding: 0.5rem;
+                }
+
+                .icon_rate {
+                    display: flex;
+                    justify-content: center;
+                    column-gap: 2rem;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 0.4rem;
+
+                    .performance_icon {
+                        &.positive {
+                            color: $color-success;
+                        }
+                        &.negative {
+                            color: $color-danger;
+                        }
+                    }
+                }
+            }
+
+            .sub {
+                padding-left: 1rem;
+                font-size: 0.9rem;
+                color: $color-muted;
+            }
+        }
+    }
+}
+// .card.home__performace-box:hover .home__performance-value {
+//     background: #f8f8f8;
+// }
+
+.revenue_container {
+    width: 55%;
+    padding: 1rem;
+    height: 20rem;
+}
+
+
+.customer_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    flex-basis: 80px;
+    height: 23rem;
+    row-gap: 0.8rem;
+
+    .c_box {
+        width: 100%;
+        height: 11.1rem;
+        padding: 1rem;
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $color-title;
+            margin-bottom: 1rem;
+        }
+
+        .value {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 5rem;
+            margin-bottom: 1.1rem;
+
+            .sum {
+                display: flex;
+                flex-direction: column;
+
+                .sum_value {
+                    color: $color-text;
+                    font-size: 1.6rem;
+                }
+
+                .desc {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    color: $color-muted;
+                    margin-top: 0.6rem;
+                }
+            }
+
+            .add {
+                display: flex;
+                flex-direction: column;
+
+                .value {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    column-gap: 0.3rem;
+                    margin-bottom: 0.1rem;
+                    color: $color-text;
+
+                    .icon {
+                        margin-right: 0.8rem;
+                        width: 2rem;
+                        height: 2rem;
+                        background-color: #9400d327;
+                        border-radius: 3px;
+                        padding: 0.2rem;
+                        text-align: center;
+                        color: $color-purple1;
+                    }
+                }
+
+                .desc {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    color: $color-muted;
+                    margin-top: 0.6rem;
+                }
+            }
+        }
+
+        .percent {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $color-title;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .icon {
+                width: 2rem;
+                height: 2rem;
+                margin-left: 1rem;
+                background: rgba(103, 255, 154, 0.178);
+                border-radius: 50%;
+                padding: 0.5rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.customer_order {
+    flex: 2;
+    height: 23rem;
+    padding: 1rem;
+}
+
+
+.sales_channel {
+    flex: 1;
+    flex-basis: 5rem;
+    height: 23rem;
+    padding: 1rem;
+}
+
+
+.Product {
+    flex: 2;
+    height: 23rem;
+    padding: 1rem;
+
+    .title {
+        color: $color-title;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 0.3rem;
+    }
+
+    table {
+        width: 100%;
+
+        thead {
+            th {
+                color: #918b8b;
+                text-align: left;
+                font-weight: 400;
+                font-size: 0.9rem;
+            }
+        }
+
+        tbody {
+            td {
+                border-bottom: 1px solid #F5F5F5;
+                height: 1.8rem;
+                color: $color-text;
+                font-size: 0.8rem;
+            }
+
+            tr:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+
+            .detail {
+                border: 1px solid $color-purple1;
+                border-radius: 3px;
+                margin: 0.2rem;
+                text-align: center;
+                cursor: pointer;
+                transition: .3s ease;
+
+                &:hover {
+                    scale: 1;
+                    background-color: $color-purple1;
+                    border-color: $color-purple1;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+// Dark Mode
+
+.page.dark {
+    .performance_container {
+        .row {
+            .box {
+                &:hover {
+                    background: #3b3a3a;
+                }
+
+                .title {
+                    color: $color-title-dark;
+                }
+
+                .divider {
+                    background: linear-gradient(to right,  rgba(255, 255, 255, 0.925), rgba(43, 40, 40, 0.658));
+                }
+
+                .value_section {
+                    .value {
+                        color: $color-text-dark;
+                        background: #2b2a2abe;
+                    }
+                }
+            }
+        }
+    }
+
+    .customer_container {
+        .c_box {
+            .title {
+                color: $color-title-dark;
+            }
+
+            .value {
+                .sum_value {
+                    color: $color-text-dark;
+                }
+
+                .desc {
+                    color: rgb(99, 97, 97);
+                }
+            }
+
+            .add {
+                .value {
+                    color: $color-text-dark;
+
+                    .icon {
+                        background-color: #d69deeaf;
+                    }
+                }
+
+                .desc {
+                    color: $color-muted-dark;
+                }
+            }
+
+            .percent {
+                color: $color-title-dark;
+
+                .icon {
+                    background: rgba(150, 243, 181, 0.637);
+                }
+            }
+        }
+    }
+
+    .Product {
+        .title {
+            color: $color-title-dark;
+        }
+
+        table {
+            thead {
+                th {
+                    color: #dbd8d8;
+                }
+            }
+
+            tbody {
+                td {
+                    border-bottom: 1px solid #2b2a2abe;
+                    color: $color-text-dark;
+                }
+
+                tr:last-child {
+                    td {
+                        border-bottom: none;
+                    }
+                }
+
+                .detail {
+                    border: 1px solid #E0AAFF;
+
+                    &:hover {
+                        scale: 1;
+                        background-color: $color-main-dark;
+                        border-color: $color-main-dark;
+                        color: #222;
+                    }
+                }
+            }
+        }
+    }
+}

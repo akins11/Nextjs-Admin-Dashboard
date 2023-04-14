@@ -1,0 +1,324 @@
+$color-main: #9400D3;
+$color-title: #666666;
+$color-text: #555555;
+$color-muted: #a8a6a6;
+$color-danger: #F25C54;
+$color-success: #41F1B6;
+
+$color-title-dark: rgb(238, 234, 234);
+$color-text-dark: white;
+$color-muted-dark: rgb(99, 97, 97);
+$color-main-dark: #C77DFF;
+$color-purple6: #E0AAFF;
+
+
+
+.transaction_summary {
+    width: 35%;
+    flex: 1;
+    height: 22rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 1.5rem;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        .this_year {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 1.5rem;
+
+            .title {
+                align-self: flex-end;
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: $color-text;
+            }
+
+            .container {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                background-color: #a70ee923;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s ease;
+
+                &:hover {
+                    background-color: $color-main;
+                    color: white;
+                    cursor: default;
+
+                    .value {
+                        color: white;
+                    }
+                }
+
+                .value {
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                    color: $color-text;
+                }
+            }
+        }
+
+        .last_year {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 1.5rem;
+
+            .title {
+                align-self: flex-end;
+                font-size: 1.3rem;
+                font-weight: 400;
+                color: $color-text;
+            }
+
+            .container {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                background-color: #a70ee923;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s ease;
+
+                &:hover {
+                    background-color: $color-main;
+                    cursor: default;
+
+                    .value {
+                        color: white;
+                    }
+                }
+
+                .value {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: $color-text;
+                }
+            }
+        }
+    }
+
+    .sub_info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 3.1rem;
+
+        .lw{
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: $color-muted;
+        }
+    }
+}
+
+
+.daily_transaction {
+    width: 65%;
+    height: 22rem;
+    padding: 1rem;
+
+    .title {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $color-title;
+        margin-bottom: 0.3rem;
+    }
+
+    .sub_title {
+        font-style: 0.8rem;
+        font-weight: 400;
+        color: $color-muted;
+    }
+}
+
+
+
+.distribution_channel {
+    flex: 1;
+    height: 27rem;
+    padding: 1rem;
+
+    .title {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $color-title;
+
+        .sub {
+            font-size: 0.7rem;
+            font-weight: 300;
+            color: $color-muted;
+        }
+    }
+}
+
+
+
+.country_transactions {
+    flex: 2;
+    height: 27rem;
+    padding: 1rem;
+
+    table {
+        width: 100%;
+        text-align: left;
+
+        thead {
+            th {
+                color: $color-title;
+                text-align: left;
+                font-weight: 400;
+            }
+        }
+        
+        tbody {
+            td {
+                border-bottom: 1px solid #F5F5F5;
+                height: 2rem;
+                color: #555555;
+                font-size: 0.9rem;
+                padding-left: 0.8rem;
+            }
+
+            tr:first-child {
+                td {
+                    background: $color-main;
+                    color: white;
+                    margin-top: 0.6rem;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    transition: all 300ms ease;
+                }
+
+                .position {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+
+                .access {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                    .a {
+                        &.green {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .a {
+                &.green {
+                    color: $color-success;
+                }
+                &.red {
+                    color: $color-danger;
+                }
+            }
+
+            tr:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Dark Mode
+.page.dark {
+    .transaction_summary {
+        .title {
+            color: $color-title-dark;
+        }
+
+        .content {
+            .this_year,
+            .last_year {
+                .title {
+                    color: $color-text-dark;
+                }
+
+                .container {
+                    background-color: #4036447c;
+                    
+                    h2 {
+                        color: $color-text-dark;
+                    }
+
+                    &:hover {
+                        background-color: $color-main-dark;
+                    }
+                }
+
+                .sub_info {
+                    .lw {
+                        color: $color-muted-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .daily_transaction {
+        .title {
+            color: $color-title-dark;
+        }
+
+        .sub_title {
+            color: $color-muted-dark;
+        }
+    }
+
+    .distribution_channel {
+        .title {
+            color: $color-title-dark;
+
+            .sub {
+                color: $color-muted-dark;
+            }
+        }
+    }
+
+    .country_transactions {
+        table {
+            thead {
+                th {
+                    color: $color-title-dark;
+                }
+            }
+
+            tbody {
+                td {
+                    border-bottom: 1px solid #2b2929;
+                    color: $color-text-dark;
+                }
+
+                tr:first-child {
+                    td {
+                        background: $color-main-dark;
+                    }
+                }
+            }
+        }
+    }
+}
